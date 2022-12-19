@@ -1,0 +1,19 @@
+version: 2
+sources:
+  - name: results
+    database: "{{ env_var('CREDIT_PROJECT') }}"
+    schema: "{{ env_var('RAW_STAGE_SCHEMA') }}"
+    tables:
+      - name: "{{ env_var('RAW_CREDIT_TRAIN_TABLE') }}"
+
+models:
+  - name: one_test_pipeline
+    description: A test pipeline to injest credit data
+    config:
+      materialized: table
+    meta:
+      owner: "@me"
+      fal:
+        scripts:
+          before:
+            - fal_scripts/load_csv_data.py

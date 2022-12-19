@@ -1,0 +1,21 @@
+SELECT 
+`Loan ID` as LOAN_ID,
+`Customer ID` as CUSTOMER_ID,
+`Loan Status` as LOAN_STATUS,
+`Current Loan Amount` as CURRENT_LOAN_AMOUNT,
+`Term` as TERM,
+`Credit Score` as CREDIT_SCORE,
+`Annual Income` as ANNUAL_INCOME,
+`Years in current job` as YEARS_IN_CURRENT_JOB,
+`Home Ownership` as HOME_OWNERSHIP,
+`Purpose` as PURPOSE,
+`Monthly Debt` as MONTHLY_DEBT,
+`Years of Credit History` as YEARS_OF_CREDIT_HISTORY,
+`Months since last delinquent` as MONTHS_SINCE_LAST_DELINQUENT,
+`Number of Open Accounts` as NUMBER_OF_OPEN_ACCOUNTS,
+`Number of Credit Problems` as NUMBER_OF_CREDIT_PROBLEMS,
+`Current Credit Balance` as CURRENT_CREDIT_BALANCE,
+`Maximum Open Credit` as MAXIMUM_OPEN_CREDIT,
+`Bankruptcies` as BANKRUPTCIES,
+`Tax Liens` as TAX_LIENS
+FROM '{{ env_var('RAW_CREDIT_TRAIN_TABLE')  }}'
