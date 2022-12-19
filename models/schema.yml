@@ -8,9 +8,11 @@ sources:
 
 models:
   - name: one_test_pipeline
-    description: A test pipeline to injest credit data
+    description: A test pipeline to inject credit data
     config:
       materialized: table
+
+      # Load csv into raw buffer table
     meta:
       owner: "@me"
       fal:
